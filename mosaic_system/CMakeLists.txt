@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+set (CMAKE_CXX_STANDARD 11)
+project( MosaicSystem )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( MosaicSystem MosaicSystem.cpp )
+target_link_libraries( MosaicSystem ${OpenCV_LIBS} )
